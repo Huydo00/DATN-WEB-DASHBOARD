@@ -55,6 +55,20 @@ onbt2.onclick = function(){
         nl2 : Number((document.getElementById("inputcfsuaNL" + A2)).value)
 })}
 
+var A3 = 3;
+var onbt3 = document.getElementById("btcfsuaNL"+ A3);
+onbt3.onclick = function(){
+    database.ref("/MACHINEROBOT/CFSUADA").update({
+        nl3 : Number((document.getElementById("inputcfsuaNL" + A3)).value)
+})}
+
+var A4 = 4;
+var onbt4 = document.getElementById("btcfsuaNL"+ A4);
+onbt4.onclick = function(){
+    database.ref("/MACHINEROBOT/CFSUADA").update({
+        nl4 : Number((document.getElementById("inputcfsuaNL" + A4)).value)
+})}
+
 
 // var Y2 = 2;
 // var onbt1 = document.getElementById("act"+ Y2);
@@ -75,6 +89,14 @@ database.ref("/MACHINEROBOT/CFSUADA/nl1").on("value", function(snapshot){
     document.getElementById("cfsuaNL1").innerHTML = X1;
 })
 database.ref("/MACHINEROBOT/CFSUADA/nl2").on("value", function(snapshot){
-    var X1 = snapshot.val();
-    document.getElementById("cfsuaNL2").innerHTML = X1;
+    var X2 = snapshot.val();
+    document.getElementById("cfsuaNL2").innerHTML = X2;
+})
+database.ref("/MACHINEROBOT/CFSUADA/nl3").on("value", function(snapshot){
+    var X3 = snapshot.val();
+    document.getElementById("cfsuaNL3").innerHTML = X3;
+})
+database.ref("/MACHINEROBOT/CFSUADA/nl4").on("value", function(snapshot){
+    var X4 = snapshot.val();
+    document.getElementById("cfsuaNL4").innerHTML = X4;
 })
