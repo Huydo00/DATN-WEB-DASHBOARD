@@ -30,13 +30,13 @@ var OTEST1 = 1;
 var onbt1 = document.getElementById("otest"+ OTEST1);
 onbt1.onclick = function(){
     database.ref("/MACHINEROBOT/CFSUADA").update({
-        START : 1
+        CFSUADASTART : 1
 })}
 var CANCELTEST1 = 1;
 var onbt1 = document.getElementById("cancel"+ CANCELTEST1);
 onbt1.onclick = function(){
     database.ref("/MACHINEROBOT/CFSUADA").update({
-        START : 0
+        CFSUADASTART : 0
 })}
 
 
